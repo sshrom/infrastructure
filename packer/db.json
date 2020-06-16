@@ -1,0 +1,20 @@
+{
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "devops-practice-276605",
+            "image_name": "reddit-db-base",
+            "image_family": "reddit-base",
+            "source_image_family": "ubuntu-1604-lts",
+            "zone": "europe-west1-b",
+            "ssh_username": "squid",
+            "machine_type": "f1-micro"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "ansible",
+            "playbook_file": "../ansible/packer_db.yml"
+        }
+    ]
+}
