@@ -1,0 +1,15 @@
+project = "devops-practice-276605"
+region  = "europe-west1"
+#public_key_path  = "~/.ssh/id_rsa.pub"
+private_key_path = "~/.ssh/id_rsa"
+#zone_instance    = "europe-west1-b"
+
+public_key_path = "~/.ssh/id_rsa.pub"
+zone            = "europe-west1-b"
+db_disk_image   = "reddit-db-base"
+
+#public_key_path = "~/.ssh/id_rsa.pub"
+#zone            = "europe-west1-b"
+app_disk_image = "reddit-app-base"
+#allowed_ip_ranges = ["188.122.246.223/32"]
+allowed_ip_ranges = ["188.122.246.223/32"]
