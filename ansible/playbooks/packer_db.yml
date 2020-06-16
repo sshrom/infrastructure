@@ -1,0 +1,32 @@
+---
+- name: Installing MongoDB 4.2
+  hosts: all
+  become: true
+  
+  tasks:
+  
+  - name: Install gnupg
+    apt:
+      name: gnupg
+      state: present
+  
+  - name: Add APT key for mongodb
+    apt_key:
+      url: https://www.mongodb.org/static/pgp/server-4.2.asc
+      state: present
+
+  - name: Add apt repository for ubunt xenial
+    apt_repository:
+      repo: "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse"
+      state: present
+
+  - name: Install mongodb package
+    apt:
+      name: mongodb-org
+      state: present
+
+  - name: Configure service supervisor
+    systemd:
+      name: mongod
+      enabled: yes
+      
