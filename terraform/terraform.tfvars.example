@@ -1,0 +1,6 @@
+project          = "devops-practice-276605"
+region           = "europe-west-1"
+public_key_path  = "~/.ssh/id_rsa.pub"
+private_key_path = "~/.ssh/id_rsa"
+disk_image       = "reddit-base-1589873941"
+zone_instance    = "europe-west1-b"
