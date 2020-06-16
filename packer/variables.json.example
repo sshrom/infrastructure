@@ -1,0 +1,12 @@
+{
+  "project_id": "infrastructure-01",
+  "source_image_family": "ubuntu-1604-lts",
+  "machine_type": "f1-micro",
+  "image_description": "packer image for devops practice",
+  "disk_size": "10",
+  "disk_type": "pd-standard",
+  "network": "default",
+  "tags": "puma-server",
+  "zone": "europe-west1-b"
+
+}
